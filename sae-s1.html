@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio BUT R&T — SAÉ S1</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sem-header { padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; border-radius: var(--radius); }
+    .sem-badge { font-size: 2.5rem; font-weight: 800; width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+    .sem-title { font-size: 1.4rem; font-weight: 800; }
+    .sem-desc { color: var(--text-dim); font-size: .85rem; margin-top: .3rem; }
+    .sae-full { margin-bottom: 2rem; border-radius: var(--radius); }
+    .sae-head { padding: 1.4rem 1.6rem; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 1.2rem; cursor: pointer; }
+    .sae-num { font-size: .7rem; padding: .35rem .7rem; border-radius: 6px; }
+    .sae-head-info { flex: 1; }
+    .sae-head-title { font-weight: 700; font-size: 1.05rem; }
+    .sae-toggle { color: var(--text-muted); font-size: .8rem; }
+    .sae-body { padding: 1.6rem; display: none; }
+    .sae-body.open { display: block; }
+    .section-block { margin-bottom: 1.8rem; }
+    .section-block h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .8rem; border-bottom: 1px solid var(--border); padding-bottom: .3rem; }
+    .section-block p, .section-block li { font-size: .86rem; color: var(--text-dim); line-height: 1.8; }
+    .ac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; }
+    .ac-item { padding: .8rem 1rem; font-size: .8rem; border-radius: 8px; }
+    .ac-code { font-weight: 700; margin-bottom: .3rem; }
+    .trace-box { border: 1px dashed var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: .7rem; font-size: .83rem; }
+    .auto-eval { border-radius: 8px; padding: 1.2rem 1.4rem; }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn active">Mes SAÉ ▾</a>
+      <div class="dropdown-content">
+        <a href="sae-s1.html">SAÉ S1</a>
+        <a href="#">SAÉ S2 (En cours)</a>
+      </div>
+    </li>
+    <li><a href="bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="sem-header fade-up">
+      <div class="sem-badge">S1</div>
+      <div>
+        <div class="sem-title">Semestre 1 — Tronc Commun</div>
+        <div class="sem-desc">Découverte des fondamentaux en réseaux, systèmes et développement.</div>
+      </div>
+    </div>
+
+    <div class="sae-full fade-up delay-1">
+      <div class="sae-head" onclick="toggle(this)">
+        <div class="sae-num">SAÉ 1.01</div>
+        <div class="sae-head-info"><div class="sae-head-title">Se sensibiliser à l'hygiène informatique</div></div>
+        <div class="sae-toggle">▸ Développer</div>
+      </div>
+      <div class="sae-body">
+        <div class="section-block">
+          <h4>Contexte & Objectifs</h4>
+          <p>Dans le cadre de la SAÉ 1.01, l'objectif était de se sensibiliser à l'hygiène informatique et à la cybersécurité. Le but était d'apprendre à identifier les risques liés à l'environnement numérique et à comprendre comment s'en protéger. Le projet consistait en une auto-formation via le MOOC de l'ANSSI , suivie d'un travail de recherche en groupe sur des thématiques spécifiques à la cybersécurité (comme la gestion des mots de passe ou l'accès SSH).</p>
+        </div>
+        <div class="section-block">
+          <h4>Apprentissages Critiques (AC) ciblés</h4>
+          <div class="ac-grid">
+            <div class="ac-item"><div class="ac-code">AC11.02</div>Comprendre l’architecture et les fondements des systèmes numériques</div>
+            <div class="ac-item"><div class="ac-code">AC11.04</div>Maîtriser les rôles et principes des systèmes d'exploitation</div>
+            <div class="ac-item"><div class="ac-code">AC11.05</div>Identifier les dysfonctionnements du réseau local et savoir les signaler</div>
+          </div>
+        </div>
+        <div class="section-block">
+          <h4>Tâches réalisées (Contribution personnelle)</h4>
+          <ul>
+            <li>Suivi et complétion des différents modules du MOOC de l'ANSSI (SecNumacadémie) portant sur la sécurité des systèmes d'information, l'authentification et la sécurité sur Internet.</li>
+            <li>Travail de recherche et d'expérimentation en groupe sur la thématique [Précise ici ton lot: B (Accès SSH)].</li>
+            <li>Rédaction d'une notice collaborative résumant nos recherches et préparation d'un support de présentation (diaporama) pour un oral de groupe.</li>
+            <li>Participation à un TP de type "Capture the Flag" (CTF) pour mettre en pratique les concepts découverts.</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Preuves & Traces</h4>
+          <div class="trace-box">Attestation de réussite ou badge obtenu suite au MOOC de l'ANSSI. Cela prouve ma compréhension globale des enjeux de cybersécurité et des bonnes pratiques.</div>
+          <div class="trace-box">Support de présentation (diaporama) ou notice collaborative réalisée pour l'oral de groupe. Cette trace démontre ma capacité à rechercher, synthétiser et présenter des informations techniques sur un sujet spécifique (ex: accès SSH, force brute).</div>
+        </div>
+        <div class="section-block">
+          <h4>Autoévaluation & Analyse réflexive</h4>
+          <div class="auto-eval">
+            <ul>
+              <li><strong>Difficultés rencontrées :</strong> Comprendre le fonctionnement technique de certaines attaques (comme la force brute) ou de certains protocoles de sécurisation lors de nos recherches.</li>
+              <li><strong>Solutions apportées :</strong> Utilisation des machines virtuelles (Debian) mises à notre disposition pour tester et expérimenter concrètement les outils , et échange avec les membres du groupe pour s'entraider.</li>
+              <li><strong>Ce que j'ai appris / Niveau de maîtrise atteint :</strong> J'ai pris conscience des risques numériques et acquis les bons réflexes en matière d'hygiène informatique. Je sais maintenant expliquer les mécanismes d'authentification et mettre en œuvre des solutions basiques pour sécuriser un environnement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--
+    <div class="sae-full fade-up delay-2">
+      <div class="sae-head" onclick="toggle(this)">
+        <div class="sae-num">SAÉ 1.02</div>
+        <div class="sae-head-info"><div class="sae-head-title">S'initier aux réseaux informatiques</div></div>
+        <div class="sae-toggle">▸ Développer</div>
+      </div>
+      <div class="sae-body">
+        <div class="section-block">
+          <h4>Contexte & Objectifs</h4>
+          <p>[À COMPLÉTER : Décris le TP de câblage, la configuration des switchs, etc.]</p>
+        </div>
+        <div class="section-block">
+          <h4>Apprentissages Critiques (AC) ciblés</h4>
+          <div class="ac-grid">
+            <div class="ac-item"><div class="ac-code">AC11.01</div>Lois fondamentales de l'électricité</div>
+            <div class="ac-item"><div class="ac-code">AC11.03</div>Configurer les fonctions de base du réseau local</div>
+            <div class="ac-item"><div class="ac-code">AC11.06</div>Installer un poste client et expliquer la procédure</div>
+            </div>
+        </div>
+        <div class="section-block">
+          <h4>Tâches réalisées</h4>
+          <ul>
+            <li>[À COMPLÉTER : Ex: Création de câbles RJ45 droits et croisés]</li>
+            <li>[À COMPLÉTER : Ex: Configuration d'un commutateur Cisco (VLANs)]</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Preuves & Traces</h4>
+          <div class="trace-box"><strong>[Nom de ta trace] :</strong> [À COMPLÉTER : Ex: Capture d'écran d'un ping réussi ou fichier de config switch]</div>
+        </div>
+        <div class="section-block">
+          <h4>Autoévaluation & Analyse réflexive</h4>
+          <div class="auto-eval">
+            <ul>
+              <li><strong>Difficultés rencontrées :</strong> [À COMPLÉTER]</li>
+              <li><strong>Solutions apportées :</strong> [À COMPLÉTER]</li>
+              <li><strong>Ce que j'ai appris :</strong> [À COMPLÉTER]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sae-full fade-up">
+      <div class="sae-head" onclick="toggle(this)">
+        <div class="sae-num">SAÉ 1.03</div>
+        <div class="sae-head-info"><div class="sae-head-title">Découvrir un dispositif de transmission</div></div>
+        <div class="sae-toggle">▸ Développer</div>
+      </div>
+      <div class="sae-body">
+        <div class="section-block">
+          <h4>Contexte & Objectifs</h4>
+          <p>[À COMPLÉTER : Mesures de signaux, utilisation d'oscilloscope...]</p>
+        </div>
+        <div class="section-block">
+          <h4>Apprentissages Critiques (AC) ciblés</h4>
+          <div class="ac-grid">
+            <div class="ac-item"><div class="ac-code">AC12.01</div>Mesurer et analyser les signaux</div>
+            <div class="ac-item"><div class="ac-code">AC12.03</div>Déployer des supports de transmission</div>
+            <div class="ac-item"><div class="ac-code">AC12.05</div>Communiquer et adapter son discours</div>
+          </div>
+        </div>
+        <div class="section-block">
+          <h4>Tâches réalisées</h4>
+          <ul>
+            <li>[À COMPLÉTER]</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Preuves & Traces</h4>
+          <div class="trace-box"><strong>[Nom de ta trace] :</strong> [À COMPLÉTER : Ex: Relevé de mesures, compte-rendu de TP]</div>
+        </div>
+        <div class="section-block">
+          <h4>Autoévaluation & Analyse réflexive</h4>
+          <div class="auto-eval">
+            <ul>
+              <li><strong>Difficultés / Solutions / Apprentissages :</strong> [À COMPLÉTER]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sae-full fade-up">
+      <div class="sae-head" onclick="toggle(this)">
+        <div class="sae-num">SAÉ 1.04</div>
+        <div class="sae-head-info"><div class="sae-head-title">Se présenter sur Internet</div></div>
+        <div class="sae-toggle">▸ Développer</div>
+      </div>
+      <div class="sae-body">
+        <div class="section-block">
+          <h4>Contexte & Objectifs</h4>
+          <p>[À COMPLÉTER : Développement web HTML/CSS pour faire une page perso, etc.]</p>
+        </div>
+        <div class="section-block">
+          <h4>Apprentissages Critiques (AC) ciblés</h4>
+          <div class="ac-grid">
+            <div class="ac-item"><div class="ac-code">AC13.01</div>Utiliser un système informatique et ses outils</div>
+            <div class="ac-item"><div class="ac-code">AC13.04</div>Connaître l’architecture et les technologies d’un site Web</div>
+          </div>
+        </div>
+        <div class="section-block">
+          <h4>Tâches réalisées</h4>
+          <ul>
+            <li>[À COMPLÉTER]</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Preuves & Traces</h4>
+          <div class="trace-box"><strong>[Nom de ta trace] :</strong> [À COMPLÉTER : Lien vers le code source, capture de la page web]</div>
+        </div>
+        <div class="section-block">
+          <h4>Autoévaluation & Analyse réflexive</h4>
+          <div class="auto-eval">
+            <ul>
+              <li><strong>Difficultés / Solutions / Apprentissages :</strong> [À COMPLÉTER]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sae-full fade-up">
+      <div class="sae-head" onclick="toggle(this)">
+        <div class="sae-num">SAÉ 1.05</div>
+        <div class="sae-head-info"><div class="sae-head-title">Traiter des données</div></div>
+        <div class="sae-toggle">▸ Développer</div>
+      </div>
+      <div class="sae-body">
+        <div class="section-block">
+          <h4>Contexte & Objectifs</h4>
+          <p>[À COMPLÉTER : Scripting Python, algorithmique...]</p>
+        </div>
+        <div class="section-block">
+          <h4>Apprentissages Critiques (AC) ciblés</h4>
+          <div class="ac-grid">
+            <div class="ac-item"><div class="ac-code">AC13.02</div>Lire, exécuter, corriger et modifier un programme</div>
+            <div class="ac-item"><div class="ac-code">AC13.03</div>Traduire un algorithme dans un langage (Python)</div>
+            <div class="ac-item"><div class="ac-code">AC13.06</div>S’intégrer dans un environnement de travail collaboratif</div>
+          </div>
+        </div>
+        <div class="section-block">
+          <h4>Tâches réalisées</h4>
+          <ul>
+            <li>[À COMPLÉTER]</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Preuves & Traces</h4>
+          <div class="trace-box"><strong>[Nom de ta trace] :</strong> [À COMPLÉTER : Extrait de code Python commenté]</div>
+        </div>
+        <div class="section-block">
+          <h4>Autoévaluation & Analyse réflexive</h4>
+          <div class="auto-eval">
+            <ul>
+              <li><strong>Difficultés / Solutions / Apprentissages :</strong> [À COMPLÉTER]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+-->
+
+<script>
+function toggle(el) {
+  const body = el.nextElementSibling;
+  const lbl = el.querySelector('.sae-toggle');
+  if (body.classList.contains('open')) {
+    body.classList.remove('open');
+    lbl.textContent = '▸ Développer';
+  } else {
+    body.classList.add('open');
+    lbl.textContent = '▾ Réduire';
+  }
+}
+</script>
+</body>
+</html>

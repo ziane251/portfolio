@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio BUT R&T — Présentation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-header { display: grid; grid-template-columns: auto 1fr; gap: 2.5rem; align-items: center; margin-bottom: 3rem; }
+    .avatar-lg { width: 130px; height: 130px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; flex-shrink: 0; }
+    .profile-name { font-size: 2.2rem; font-weight: 800; letter-spacing: -.03em; }
+    .profile-sub { color: var(--text-dim); font-size: .88rem; margin-top: .4rem; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    .info-block { padding: 1.4rem 1.6rem; border-radius: var(--radius); }
+    .info-block h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text); margin-bottom: 1rem; }
+    .info-block p, .info-block li { font-size: .85rem; color: var(--text-dim); line-height: 1.75; }
+    .info-block ul { list-style: none; padding: 0; }
+    .info-block ul li::before { content: '›  '; color: var(--text); }
+    @media(max-width:768px){ .profile-header { grid-template-columns: 1fr; text-align: center; } .avatar-lg { margin: 0 auto; } .info-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="presentation.html" class="active">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mes SAÉ ▾</a>
+      <div class="dropdown-content">
+        <a href="sae-s1.html">SAÉ S1</a>
+        <a href="#">SAÉ S2 (En cours)</a>
+      </div>
+    </li>
+    <li><a href="bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="profile-header fade-up">
+      <div class="avatar-lg">👤</div>
+      <div>
+        <span class="hero-tag">Présentation & Profil Professionnel</span>
+        <div class="profile-name">Aghiles ZIANE</div>
+        <div class="profile-sub">Étudiant en 1ère année de BUT Réseaux & Télécommunications<br>IUT Grand Ouest Normandie - Campus d'Ifs</div>
+      </div>
+    </div>
+
+    <div class="info-grid fade-up delay-1">
+      <div class="info-block">
+        <h3>Profil synthétique</h3>
+        <p>Étudiant en 1ère année de BUT R&T à l’IUT d’Ifs, j'allie la rigueur technique de ma formation à l'autonomie acquise en tant que graphiste freelance. Passionné par l'informatique et la création, je maîtrise déjà les bases du déploiement réseau, de l'administration Linux et de la conception web. Curieux et dynamique, je mobilise mes compétences pour apprendre à sécuriser les systèmes d'information tout en restant à l'écoute des besoins des utilisateurs.</p>
+      </div>
+      <div class="info-block">
+        <h3>Compétences techniques en cours d'acquisition</h3>
+        <ul>
+          <li>Bases de l'administration système (Commandes Linux, Windows)</li>
+          <li>Configuration réseau initiale (Switchs, adressage IP)</li>
+          <li>Développement et scripting (Python, HTML/CSS)</li>
+          <li>Sensibilisation à l'hygiène informatique</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-block fade-up delay-2" style="margin-bottom: 3rem;">
+      <h3>Projection professionnelle & Objectifs</h3>
+      <p>À court terme, mon objectif est d'approfondir mes compétences techniques en informatique et en administration réseaux, tout en consolidant activement mes bases en développement et programmation. À moyen terme, je souhaite vivement m'orienter vers le parcours Cybersécurité dès ma deuxième année de BUT, un domaine passionnant dans lequel j'ambitionne d'évoluer professionnellement.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Portfolio BUT R&T · [Ton Prénom] [Ton Nom]</p>
+</footer>
+</body>
+</html>

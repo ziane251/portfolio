@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio BUT R&T — Bilans S1</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bilan-nav { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .bilan-tab { padding: .5rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text-dim); font-size: .8rem; cursor: pointer; transition: all .2s; }
+    .bilan-tab.active, .bilan-tab:hover { border-color: var(--text); color: var(--text); background: var(--surface); }
+    .bilan-panel { display: none; }
+    .bilan-panel.active { display: block; }
+    .comp-header { padding: 1.6rem; margin-bottom: 2rem; border-radius: var(--radius); }
+    .comp-header-text h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: .3rem; color: var(--text); }
+    .comp-header-text p { font-size: .83rem; color: var(--text-dim); line-height: 1.7; }
+    .bilan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    .bilan-block { padding: 1.4rem; border-radius: var(--radius); }
+    .bilan-block h3 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; color: var(--text); }
+    .bilan-block ul { list-style: none; padding: 0; }
+    .bilan-block ul li { font-size: .83rem; color: var(--text-dim); padding: .35rem 0 .35rem 1.2rem; position: relative; border-bottom: 1px solid var(--border); }
+    .bilan-block ul li:last-child { border-bottom: none; }
+    .bilan-block ul li::before { content: '›'; position: absolute; left: 0; font-weight: 700; color: var(--text); }
+    .synthesis-box { padding: 1.6rem; margin-bottom: 1.5rem; border-radius: var(--radius); }
+    .synthesis-box h3 { font-size: 1rem; margin-bottom: .8rem; color: var(--text); }
+    .synthesis-box p { font-size: .85rem; color: var(--text-dim); line-height: 1.8; }
+    @media(max-width:768px){ .bilan-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mes SAÉ ▾</a>
+      <div class="dropdown-content">
+        <a href="sae-s1.html">SAÉ S1</a>
+        <a href="#">SAÉ S2 (En cours)</a>
+      </div>
+    </li>
+    <li><a href="bilan.html" class="active">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="fade-up">
+      <h1 style="font-size:2rem; margin-bottom:.8rem;">Synthèse par compétence (S1)</h1>
+      <p style="color:var(--text-dim); margin-bottom:2rem;">Bilan de ma progression vis-à-vis du référentiel du BUT R&T (Niveau 1).</p>
+    </div>
+
+    <div class="bilan-nav fade-up delay-1">
+      <button class="bilan-tab active" onclick="showBilan('rt1')">RT1 — Administrer</button>
+      <button class="bilan-tab" onclick="showBilan('rt2')">RT2 — Connecter</button>
+      <button class="bilan-tab" onclick="showBilan('rt3')">RT3 — Créer des outils</button>
+    </div>
+
+    <div class="bilan-panel active fade-up" id="panel-rt1">
+      <div class="comp-header">
+        <div class="comp-header-text">
+          <h2>RT1 — Administrer les réseaux et l'Internet (Niv 1)</h2>
+          <p>Assister l'administrateur du réseau (SAÉ 1.01 et 1.02).</p>
+        </div>
+      </div>
+      <div class="bilan-grid">
+        <div class="bilan-block">
+          <h3>AC Maîtrisés à l'issue du S1</h3>
+          <!--
+          <ul>
+            <li>[À COMPLÉTER : Ex: AC11.03 - Configurer les fonctions de base (VLANs acquis)]</li>
+            <li>[À COMPLÉTER : Ex: AC11.06 - Installer un poste client sous Windows/Linux]</li>
+          </ul>
+          -->
+        </div>
+      
+        <div class="bilan-block">
+          <h3>Axes d'amélioration pour le S2</h3>
+          <!--
+          <ul>
+            <li>[À COMPLÉTER : Ex: Améliorer ma méthode de diagnostic réseau (AC11.05)]</li>
+            <li>[À COMPLÉTER : Ex: Mieux retenir les commandes CLI Cisco sans documentation]</li>
+          </ul>
+          -->
+        </div>
+      </div>
+      <div class="synthesis-box">
+        <h3>Progression & Projection réflexive</h3>
+        <!--
+        <p>[À COMPLÉTER : Résume ici comment tu te sens vis-à-vis de cette compétence. Es-tu à l'aise ? As-tu compris la logique globale du réseau local à l'issue du S1 ?]</p>
+        -->
+      </div>
+    </div>
+
+    <div class="bilan-panel" id="panel-rt2">
+      <div class="comp-header">
+        <div class="comp-header-text">
+          <h2>RT2 — Connecter les entreprises et les usagers (Niv 1)</h2>
+          <p>Découvrir les transmissions et la ToIP (SAÉ 1.03).</p>
+        </div>
+      </div>
+      <div class="bilan-grid">
+        <div class="bilan-block">
+          <h3>AC Maîtrisés à l'issue du S1</h3>
+          <!--
+          <ul>
+            <li>[À COMPLÉTER : Ex: AC12.01 - Mesurer et analyser des signaux à l'oscilloscope]</li>
+          </ul>
+          -->
+        </div>
+        <div class="bilan-block">
+          <h3>Axes d'amélioration pour le S2</h3>
+          <!--
+          <ul>
+            <li>[À COMPLÉTER : Ex: Renforcer mes bases en mathématiques pour la modélisation]</li>
+          </ul>
+          -->
+        </div>
+      </div>
+      <div class="synthesis-box">
+        <h3>Progression & Projection réflexive</h3>
+        <!--
+        <p>[À COMPLÉTER : Bilan de tes apprentissages sur la couche physique et les signaux.]</p>
+        -->
+      </div>
+    </div>
+
+    <div class="bilan-panel" id="panel-rt3">
+      <div class="comp-header">
+        <div class="comp-header-text">
+          <h2>RT3 — Créer des outils et applications informatiques (Niv 1)</h2>
+          <p>S'intégrer dans un service informatique (SAÉ 1.04 et 1.05).</p>
+        </div>
+      </div>
+      <div class="bilan-grid">
+        <div class="bilan-block">
+          <h3>AC Maîtrisés à l'issue du S1</h3>
+          <!--
+          <ul>
+            <li>[À COMPLÉTER : Ex: AC13.02 / AC13.03 - Algorithmique de base et scripting Python]</li>
+            <li>[À COMPLÉTER : Ex: AC13.04 - Architecture web basique (HTML/CSS)]</li>
+          </ul>
+          -->
+        </div>
+        <div class="bilan-block">
+          <h3>Axes d'amélioration pour le S2</h3>
+          <!--
+          <ul>
+            <li>[À COMPLÉTER : Ex: Mieux utiliser Git pour le travail collaboratif (AC13.06)]</li>
+          </ul>
+          -->
+        </div>
+      </div>
+      <div class="synthesis-box">
+        <h3>Progression & Projection réflexive</h3>
+        <!--
+        <p>[À COMPLÉTER : Bilan de tes compétences en développement. As-tu compris l'utilité de savoir coder pour un administrateur réseau ?]</p>
+        -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function showBilan(id) {
+  document.querySelectorAll('.bilan-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.bilan-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
