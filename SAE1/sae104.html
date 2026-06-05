@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 1.04 — Site Personnel</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .sae-header { padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+    .sae-badge { font-size: 1.8rem; font-weight: 800; width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--border); }
+    .sae-title { font-size: 1.4rem; font-weight: 800; }
+    .sae-desc { color: var(--text-dim); font-size: .85rem; margin-top: .3rem; }
+    .section-block { margin-bottom: 2rem; background: var(--card); border: 1px solid var(--border); padding: 1.6rem; border-radius: var(--radius); }
+    .section-block h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; color: var(--text); }
+    .section-block p, .section-block li { font-size: .86rem; color: var(--text-dim); line-height: 1.8; }
+    .ac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; margin-top: .8rem; }
+    .ac-item { padding: .8rem 1rem; font-size: .8rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); }
+    .ac-code { font-weight: 700; margin-bottom: .3rem; color: var(--text); }
+    .trace-box { border: 1px dashed var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: .7rem; font-size: .83rem; background: var(--bg); }
+    .trace-box img { width: 100%; margin-top: .8rem; border-radius: 6px; border: 1px solid var(--border); }
+    .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-top: .8rem; }
+    .img-grid img { width: 100%; border-radius: 6px; border: 1px solid var(--border); }
+    .auto-eval-box { background: var(--surface); padding: 1.2rem 1.4rem; border-radius: 8px; border: 1px solid var(--border); }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn active">Mes Projets ▾</a>
+      <div class="dropdown-content">
+        <a href="sae101.html">Hygiène Informatique</a>
+        <a href="sae102.html">Réseaux Informatiques</a>
+        <a href="sae103.html">Dispositif de Transmission</a>
+        <a href="sae104.html">Site Personnel</a>
+        <a href="sae105.html">Traitement de Données</a>
+      </div>
+    </li>
+    <li><a href="../bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="sae-header fade-up">
+      <div class="sae-badge">1.04</div>
+      <div>
+        <div class="sae-title">SAÉ 1.04 – Se présenter sur Internet</div>
+        <div class="sae-desc">BUT R&T · Semestre 1 · Projet individuel</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Contexte & Objectifs</h4>
+      <p>L'objectif de cette SAÉ était de créer un site web personnel pour se présenter sur Internet. J'ai choisi de réaliser un site thématique autour d'Assassin's Creed appelé « Le Credo », qui inclut aussi une page « À propos » où je me présente. Le site a été codé entièrement à la main en HTML et CSS, sans template ni générateur, et hébergé sur GitHub Pages.</p>
+      <p>Lien du site : <a href="https://ziane251.github.io/Projet-SAE-14/" target="_blank" style="color:var(--text); text-decoration:underline;">ziane251.github.io/Projet-SAE-14</a></p>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Apprentissages Critiques (AC) concernés</h4>
+      <div class="ac-grid">
+        <div class="ac-item"><div class="ac-code">AC13.01</div>Utiliser un système informatique et ses outils — j'ai utilisé VS Code, Git et GitHub Pages pour développer, versionner et héberger le site.</div>
+        <div class="ac-item"><div class="ac-code">AC13.04</div>Se présenter sur Internet — j'ai conçu un site web complet avec une page de présentation personnelle, une navigation claire et un design soigné.</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Tâches réalisées (Contribution personnelle)</h4>
+      <ul>
+        <li>Conception de la charte graphique : thème sombre, couleurs rouge/noir inspirées de l'univers Assassin's Creed, typographie et mise en page travaillées.</li>
+        <li>Écriture de la structure HTML complète : page d'accueil, page « L'Univers ASC » (avec les différentes époques des jeux), page « À propos » (présentation personnelle) et page « Contact ».</li>
+        <li>Mise en forme CSS à la main : hero banners avec images de fond, grille de cartes pour les jeux, navigation responsive avec menu burger.</li>
+        <li>Hébergement sur GitHub Pages et gestion du code avec Git.</li>
+      </ul>
+      <div class="difficulties-block">
+        <h5>Difficultés rencontrées</h5>
+        <ul>
+          <li>Le responsive : le menu burger ne fonctionnait pas correctement sur la page « L'Univers ASC », et l'affichage mobile posait problème sur certaines sections.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Résultats obtenus / Preuves et traces</h4>
+
+      <div class="trace-box">
+        <strong>Page d'accueil — « Le Credo »</strong> — Hero banner avec le thème Assassin's Creed Unity, navigation et section de présentation de la saga.
+        <img src="../img/sae104-accueil.png" alt="Page d'accueil Le Credo">
+      </div>
+
+      <div class="trace-box">
+        <strong>Contenu — Les époques des jeux</strong> — Grille de cartes présentant les différentes ères : Antiquité, Renaissance, Révolutions, Orient et Asie.
+        <img src="../img/sae104-contenu.png" alt="Section contenu avec cartes des jeux">
+      </div>
+
+      <div class="trace-box">
+        <strong>Page « À propos »</strong> — Présentation personnelle : qui je suis, mon parcours en BUT R&T et le contexte du projet.
+        <img src="../img/sae104-apropos.png" alt="Page À propos du projet">
+      </div>
+
+      <div class="trace-box">
+        <strong>Extrait du code HTML</strong> — Le site est codé entièrement à la main, sans framework ni template.
+        <img src="../img/sae104-code.png" alt="Extrait du code HTML du site">
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-3">
+      <h4>Autoévaluation & Démarche réflexive</h4>
+      <div class="auto-eval-box">
+        <table class="reflexion-table">
+          <thead>
+            <tr>
+              <th>Difficulté rencontrée</th>
+              <th>Ce que je ferais si c'était à refaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Le responsive : le menu burger ne s'affichait pas bien sur la page « L'Univers ASC » et certaines sections passaient mal sur mobile.</td>
+              <td>Partir d'une approche mobile-first dès le départ au lieu de tout faire en desktop puis adapter après. Tester sur téléphone plus tôt dans le développement.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="learnings-block">
+          <h5>Ce que j'ai appris & positionnement</h5>
+          <p>Ce projet m'a permis de consolider mes bases en HTML/CSS et de découvrir le workflow complet d'un site web : de la conception du design au déploiement sur GitHub Pages en passant par le code et le responsive. Mon expérience en graphisme m'a aidé pour la partie visuelle, mais j'ai appris que rendre un site beau sur desktop ne suffit pas — il faut penser au mobile dès le début. C'est aussi la première fois que j'utilisais Git et GitHub pour héberger un projet. Je me positionne à un niveau <strong>satisfaisant</strong> : le site est en ligne, fonctionnel et visuellement abouti, mais le responsive reste à perfectionner.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><p>Portfolio BUT R&T · Aghiles ZIANE</p></footer>
+</body>
+</html>

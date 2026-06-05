@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 1.02 — Réseaux Informatiques</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .sae-header { padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+    .sae-badge { font-size: 1.8rem; font-weight: 800; width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--border); }
+    .sae-title { font-size: 1.4rem; font-weight: 800; }
+    .sae-desc { color: var(--text-dim); font-size: .85rem; margin-top: .3rem; }
+    .section-block { margin-bottom: 2rem; background: var(--card); border: 1px solid var(--border); padding: 1.6rem; border-radius: var(--radius); }
+    .section-block h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; color: var(--text); }
+    .section-block p, .section-block li { font-size: .86rem; color: var(--text-dim); line-height: 1.8; }
+    .ac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; margin-top: .8rem; }
+    .ac-item { padding: .8rem 1rem; font-size: .8rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); }
+    .ac-code { font-weight: 700; margin-bottom: .3rem; color: var(--text); }
+    .trace-box { border: 1px dashed var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: .7rem; font-size: .83rem; background: var(--bg); }
+    .auto-eval-box { background: var(--surface); padding: 1.2rem 1.4rem; border-radius: 8px; border: 1px solid var(--border); }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn active">Mes Projets ▾</a>
+      <div class="dropdown-content">
+        <a href="sae101.html">Hygiène Informatique</a>
+        <a href="sae102.html">Réseaux Informatiques</a>
+        <a href="sae103.html">Dispositif de Transmission</a>
+        <a href="sae104.html">Site Personnel</a>
+        <a href="sae105.html">Traitement de Données</a>
+      </div>
+    </li>
+    <li><a href="../bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="sae-header fade-up">
+      <div class="sae-badge">1.02</div>
+      <div>
+        <div class="sae-title">SAÉ 1.02 – S'initier aux réseaux informatiques</div>
+        <div class="sae-desc">BUT R&T · Semestre 1 · Groupe : Aghiles, Thomas, Thibaut, Lucas, Ahmed</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Contexte & Objectifs</h4>
+      <p>Le scénario : on est recruté dans une entreprise fictive, Fibre&Company, qui doit doubler ses effectifs. Son réseau actuel est trop basique et pas sécurisé. Notre mission était de concevoir et déployer un nouveau réseau LAN complet avec des VLANs, des commutateurs Cisco (2960X et 3560), un routeur 2911, une VM Debian avec des services (web, FTP, DNS, TFTP) et des mesures de sécurité (SSH, VLAN parking, désactivation telnet/HTTP).</p>
+      <p>C'était notre premier vrai projet de groupe en réseau. On avait les documents du projet mais pas de guide étape par étape : il fallait comprendre ce qu'on attendait de nous et s'organiser par nous-mêmes.</p>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Apprentissages Critiques (AC) concernés</h4>
+      <div class="ac-grid">
+        <div class="ac-item"><div class="ac-code">AC11.01</div>Maîtriser les lois fondamentales de l'électricité — mise en pratique à travers le câblage physique de la baie et les connexions entre les équipements.</div>
+        <div class="ac-item"><div class="ac-code">AC11.02</div>Comprendre l'architecture des systèmes numériques — conception du plan d'adressage IPv4 et des schémas réseau (physique et logique).</div>
+        <div class="ac-item"><div class="ac-code">AC11.03</div>Configurer les fonctions de base du réseau local — configuration des VLANs, du RSTP, de l'agrégation de liens et du routage inter-VLAN sur les commutateurs Cisco.</div>
+        <div class="ac-item"><div class="ac-code">AC11.05</div>Identifier les dysfonctionnements réseau — tests de connectivité, vérification des configurations et débogage en cas de problème.</div>
+        <div class="ac-item"><div class="ac-code">AC11.04</div>Maîtriser les principes des systèmes d'exploitation — installation et configuration d'une VM Debian (services web, FTP, DNS, TFTP) et manipulation du système Linux.</div>
+        <div class="ac-item"><div class="ac-code">AC11.06</div>Installer un poste client — configuration des postes utilisateurs avec adressage IP via DHCP et tests de connectivité vers les services déployés.</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Tâches réalisées (Contribution personnelle)</h4>
+      <ul>
+        <li>Réalisation du schéma physique du réseau (baie, routeur, switches, serveur, postes).</li>
+        <li>Configuration du routeur 2911 avec Ahmed : routage statique vers la box, NAT, accès SSH, sécurisation (mot de passe chiffré, bannière, désactivation telnet).</li>
+        <li>Mise en place des services sur la VM Debian avec Ahmed : serveur web, FTP, DNS cache, TFTP.</li>
+        <li>Participation au plan d'adressage IPv4 (plage 172.17.x.x, un sous-réseau par VLAN avec masque calculé pour 150 machines).</li>
+        <li>Participation aux tests finaux et au TP noté (déploiement du réseau préparé à l'avance en 30 min).</li>
+      </ul>
+      <div class="difficulties-block">
+        <h5>Difficultés rencontrées</h5>
+        <ul>
+          <li>C'était notre tout premier projet de groupe de cette envergure. On a eu du mal au début à comprendre ce qu'on attendait de nous : on avait les documents, mais pas d'instructions étape par étape.</li>
+          <li>Le plan d'adressage IPv4 a pris du temps à organiser proprement avant de passer aux manips.</li>
+          <li>Le TP noté était stressant : les consignes étaient difficiles à comprendre, mais on a réussi la plupart des tâches demandées.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Résultats obtenus / Preuves et traces</h4>
+
+      <div class="trace-box">
+        <strong>Schéma physique du réseau (réalisé par moi)</strong> — Architecture complète : box, routeur R1, switch multilayer SWR1, switches SW1/SW2, serveur Proxmox et 4 postes. Ce schéma a servi de référence au groupe pendant tout le projet.
+        <img src="../img/sae102-schema-physique.png" alt="Schéma physique du réseau Fibre&Company" style="width:100%; margin-top:.8rem; border-radius:6px; border:1px solid var(--border);">
+      </div>
+
+      <div class="trace-box">
+        <strong>Schéma logique</strong> — VLANs, adressage IP par sous-réseau (172.17.x.0/24) et liens entre équipements.
+        <img src="../img/sae102-schema-logique.png" alt="Schéma logique avec VLANs et adressage IP" style="width:100%; margin-top:.8rem; border-radius:6px; border:1px solid var(--border);">
+      </div>
+
+      <div class="trace-box">
+        <strong>Topologie Cisco Packet Tracer</strong> — Simulation complète du réseau avec le routeur, le switch multilayer 3560, les deux switches 2960, les 4 postes et le serveur.
+        <img src="../img/sae102-packet-tracer.png" alt="Topologie Cisco Packet Tracer" style="width:100%; margin-top:.8rem; border-radius:6px; border:1px solid var(--border);">
+      </div>
+
+      <div class="trace-box">
+        <strong>Extrait — Configuration du routeur 2911</strong> — Routage statique, NAT, accès SSH sécurisé. Configuration réalisée avec Ahmed.
+        <pre style="margin-top:.8rem; padding:1rem; background:var(--bg); border:1px solid var(--border); border-radius:6px; font-size:.75rem; line-height:1.6; overflow-x:auto; color:var(--text-dim);">! Lien vers le Switch multilayer
+interface GigabitEthernet0/1
+ ip address 172.17.1.2 255.255.255.0
+ ip nat inside
+
+! Lien vers la Box ADSL
+interface GigabitEthernet0/2
+ ip address 192.168.111.2 255.255.255.0
+ ip nat outside
+
+! Route par défaut + NAT
+ip route 0.0.0.0 0.0.0.0 192.168.111.1
+access-list 1 permit 172.17.0.0 0.0.255.255
+ip nat inside source list 1 interface Gi0/2 overload
+
+! Accès SSH uniquement
+ip domain-name fibre.lan
+crypto key generate rsa modulus 2048
+username admin privilege 15 secret azerty
+line vty 0 4
+ transport input ssh
+ login local</pre>
+      </div>
+
+    </div>
+
+    <div class="section-block fade-up delay-3">
+      <h4>Autoévaluation & Démarche réflexive</h4>
+      <div class="auto-eval-box">
+        <table class="reflexion-table">
+          <thead>
+            <tr>
+              <th>Difficulté rencontrée</th>
+              <th>Ce que je ferais si c'était à refaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Premier projet de groupe de cette taille : on ne savait pas trop par où commencer, les documents étaient denses et sans guide pas-à-pas.</td>
+              <td>Prendre un temps en début de projet pour lire tous les documents ensemble, lister les tâches concrètes et les prioriser avant de toucher au matériel.</td>
+            </tr>
+            <tr>
+              <td>Le plan d'adressage IPv4 a pris du temps à bien poser avant de pouvoir configurer les équipements.</td>
+              <td>Faire le plan d'adressage en tout premier, le valider avec le groupe, puis seulement passer aux manips. Ça aurait évité des allers-retours.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="learnings-block">
+          <h5>Ce que j'ai appris & positionnement</h5>
+          <p>Ce projet m'a appris à m'organiser en équipe, à répartir les tâches et à construire un réseau étape par étape, du schéma à la manip. Avant ce projet, les réseaux restaient théoriques pour moi. Après, je sais configurer un routeur, créer des VLANs, mettre en place du RSTP et déployer des services sur une VM Debian. C'est aussi la première fois que j'ai vu le lien entre tous les cours (R101, R103, R108) appliqués ensemble sur un seul projet. Je me positionne à un niveau <strong>satisfaisant</strong> sur les AC visés : je suis capable de déployer un réseau fonctionnel en équipe, mais je dois encore gagner en rapidité et en autonomie sur le diagnostic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><p>Portfolio BUT R&T · Aghiles ZIANE</p></footer>
+</body>
+</html>

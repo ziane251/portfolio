@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 1.03 — Dispositif de Transmission</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .sae-header { padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+    .sae-badge { font-size: 1.8rem; font-weight: 800; width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--border); }
+    .sae-title { font-size: 1.4rem; font-weight: 800; }
+    .sae-desc { color: var(--text-dim); font-size: .85rem; margin-top: .3rem; }
+    .section-block { margin-bottom: 2rem; background: var(--card); border: 1px solid var(--border); padding: 1.6rem; border-radius: var(--radius); }
+    .section-block h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; color: var(--text); }
+    .section-block p, .section-block li { font-size: .86rem; color: var(--text-dim); line-height: 1.8; }
+    .ac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; margin-top: .8rem; }
+    .ac-item { padding: .8rem 1rem; font-size: .8rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); }
+    .ac-code { font-weight: 700; margin-bottom: .3rem; color: var(--text); }
+    .trace-box { border: 1px dashed var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: .7rem; font-size: .83rem; background: var(--bg); }
+    .trace-box img { width: 100%; margin-top: .8rem; border-radius: 6px; border: 1px solid var(--border); }
+    .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-top: .8rem; }
+    .img-grid img { width: 100%; border-radius: 6px; border: 1px solid var(--border); }
+    .auto-eval-box { background: var(--surface); padding: 1.2rem 1.4rem; border-radius: 8px; border: 1px solid var(--border); }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn active">Mes Projets ▾</a>
+      <div class="dropdown-content">
+        <a href="sae101.html">Hygiène Informatique</a>
+        <a href="sae102.html">Réseaux Informatiques</a>
+        <a href="sae103.html">Dispositif de Transmission</a>
+        <a href="sae104.html">Site Personnel</a>
+        <a href="sae105.html">Traitement de Données</a>
+      </div>
+    </li>
+    <li><a href="../bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="sae-header fade-up">
+      <div class="sae-badge">1.03</div>
+      <div>
+        <div class="sae-title">SAÉ 1.03 – Découvrir un dispositif de transmission</div>
+        <div class="sae-desc">BUT R&T · Semestre 1 · Groupe : Aghiles, Thibaut, Antonin, Corentin</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Contexte & Objectifs</h4>
+      <p>Cette SAÉ portait sur l'étude des supports physiques de transmission : le cuivre (câbles coaxiaux et Ethernet) et la fibre optique. L'objectif était de comprendre comment on mesure et qualifie ces supports dans un contexte professionnel. On a travaillé sur deux parties : des mesures de longueur et de Distance to Fault (DTF) sur câble coaxial et Ethernet à l'aide d'un analyseur DTF, d'un GBF et d'un oscilloscope, puis une mesure de photométrie sur une liaison fibre optique de type FTTH. À la fin, on devait rendre deux rapports de mesure (un pour le cuivre, un pour la fibre) et passer un QCM final.</p>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Apprentissages Critiques (AC) concernés</h4>
+      <div class="ac-grid">
+        <div class="ac-item"><div class="ac-code">AC12.01</div>Mesurer et analyser les signaux — j'ai utilisé un oscilloscope, un GBF et un analyseur DTF pour mesurer des longueurs de câbles et un photomètre pour mesurer l'atténuation d'une liaison fibre.</div>
+        <div class="ac-item"><div class="ac-code">AC12.03</div>Déployer des supports de transmission — j'ai câblé une liaison fibre optique FTTH sur le boîtier GPON (liaison L6) et mesuré son affaiblissement (8.80 dB à 1550 nm).</div>
+        <div class="ac-item"><div class="ac-code">AC12.05</div>Communiquer avec un tiers — j'ai rédigé un rapport de mesure en groupe et présenté les résultats de façon structurée (contexte, méthode, résultats, conclusion).</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Tâches réalisées (Contribution personnelle)</h4>
+      <ul>
+        <li>Partie cuivre : mesures de longueur sur câble coaxial (RG58, NVP 66%) et câble Ethernet avec l'analyseur DTF et en régime impulsionnel (GBF + oscilloscope). Calcul de la NVP à partir d'un câble étalon de 2 m.</li>
+        <li>Partie fibre optique : câblage de la liaison L6 sur le boîtier GPON (source optique port 20 → ports 16-15 → ports 14-2 → port 3 vers le photomètre).</li>
+        <li>Nettoyage des connecteurs au stylo nettoyeur, calibration de la référence (« faire le zéro ») et relevé de l'atténuation à 1550 nm.</li>
+        <li>Rédaction du rapport de photométrie avec le groupe (résultat : 8.80 dB).</li>
+        <li>Préparation d'une fiche de synthèse pour le QCM final.</li>
+      </ul>
+      <div class="difficulties-block">
+        <h5>Difficultés rencontrées</h5>
+        <ul>
+          <li>Les calculs liés aux transmissions (NVP, conversion dB/dBm, atténuation linéique) n'étaient pas évidents au début.</li>
+          <li>Le câblage de la liaison fibre sur le boîtier GPON demandait de bien suivre le schéma de connexion sans se tromper de port.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Résultats obtenus / Preuves et traces</h4>
+
+      <div class="trace-box">
+        <strong>Montage complet de la mesure de photométrie</strong> — Source laser OLS-35 (à gauche), tiroir optique GPON avec jarretières fibre, et photomètre OLP-35 (à droite). Liaison L6 câblée.
+        <img src="../img/sae103-montage-complet.jpg" alt="Montage complet photométrie fibre optique">
+      </div>
+
+      <div class="trace-box">
+        <strong>Détail du câblage et instruments</strong>
+        <div class="img-grid">
+          <img src="../img/sae103-source-laser.jpg" alt="Source laser OLS-35 à 1550 nm">
+          <img src="../img/sae103-cablage-gpon.jpg" alt="Câblage liaison L6 sur boîtier GPON">
+        </div>
+        <p style="font-size:.75rem; color:var(--text-muted); margin-top:.4rem;">À gauche : source laser VIAVI OLS-35 réglée sur 1550 nm. À droite : détail du câblage sur le tiroir optique GPON.</p>
+      </div>
+
+      <div class="trace-box">
+        <strong>Résultat de mesure — 8.80 dB</strong> — Atténuation totale de la liaison L6 relevée sur le photomètre VIAVI OLP-35 à 1550 nm.
+        <img src="../img/sae103-resultat-photometre.jpg" alt="Photomètre affichant 8.80 dB">
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-3">
+      <h4>Autoévaluation & Démarche réflexive</h4>
+      <div class="auto-eval-box">
+        <table class="reflexion-table">
+          <thead>
+            <tr>
+              <th>Difficulté rencontrée</th>
+              <th>Ce que je ferais si c'était à refaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Les calculs (NVP, dB, atténuation) étaient difficiles à assimiler, surtout les conversions entre dB et dBm.</td>
+              <td>Préparer une fiche avec toutes les formules clés et des exemples résolus avant les séances de TP, pour ne pas perdre de temps pendant les manips.</td>
+            </tr>
+            <tr>
+              <td>Le câblage de la liaison fibre sur le boîtier GPON : il fallait suivre précisément le schéma de connexion sans se tromper de port.</td>
+              <td>Prendre le temps de repérer tous les ports sur le tiroir physique avant de brancher, et vérifier chaque connexion une par une au lieu de tout câbler d'un coup.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="learnings-block">
+          <h5>Ce que j'ai appris & positionnement</h5>
+          <p>Cette SAÉ m'a fait comprendre concrètement comment fonctionnent les supports de transmission qu'on utilise tous les jours sans y penser. J'ai appris à mesurer la longueur d'un câble avec un analyseur DTF, à calculer la NVP d'un câble Ethernet, et surtout à qualifier une liaison fibre optique FTTH par photométrie. Ça m'a aussi montré l'importance de la rigueur dans les mesures : un connecteur mal nettoyé ou une calibration oubliée et les résultats sont faussés. Je me positionne à un niveau <strong>en cours d'acquisition</strong> : la partie pratique est comprise, mais les calculs théoriques (bilan optique, conversions dB) demandent encore du travail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><p>Portfolio BUT R&T · Aghiles ZIANE</p></footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 1.05 — Traitement de Données</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .sae-header { padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+    .sae-badge { font-size: 1.8rem; font-weight: 800; width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--border); }
+    .sae-title { font-size: 1.4rem; font-weight: 800; }
+    .sae-desc { color: var(--text-dim); font-size: .85rem; margin-top: .3rem; }
+    .section-block { margin-bottom: 2rem; background: var(--card); border: 1px solid var(--border); padding: 1.6rem; border-radius: var(--radius); }
+    .section-block h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; color: var(--text); }
+    .section-block p, .section-block li { font-size: .86rem; color: var(--text-dim); line-height: 1.8; }
+    .ac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; margin-top: .8rem; }
+    .ac-item { padding: .8rem 1rem; font-size: .8rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); }
+    .ac-code { font-weight: 700; margin-bottom: .3rem; color: var(--text); }
+    .trace-box { border: 1px dashed var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: .7rem; font-size: .83rem; background: var(--bg); }
+    .auto-eval-box { background: var(--surface); padding: 1.2rem 1.4rem; border-radius: 8px; border: 1px solid var(--border); }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn active">Mes Projets ▾</a>
+      <div class="dropdown-content">
+        <a href="sae101.html">Hygiène Informatique</a>
+        <a href="sae102.html">Réseaux Informatiques</a>
+        <a href="sae103.html">Dispositif de Transmission</a>
+        <a href="sae104.html">Site Personnel</a>
+        <a href="sae105.html">Traitement de Données</a>
+      </div>
+    </li>
+    <li><a href="../bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="sae-header fade-up">
+      <div class="sae-badge">1.05</div>
+      <div>
+        <div class="sae-title">SAÉ 1.05 – Traiter des données</div>
+        <div class="sae-desc">BUT R&T · Semestre 1 · Binôme : Aghiles & Thibaut</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Contexte & Objectifs</h4>
+      <p>Le but de cette SAÉ était de créer des outils en Python pour récupérer, traiter et présenter des données issues de la base OpenStreetMap. Le projet se découpait en deux parties : d'abord un script <code>fiche_osm.py</code> qui génère une fiche HTML sur un point d'intérêt (restaurant, commerce…), puis un script <code>infos_locales.py</code> qui récupère tous les objets d'un certain type dans une ville et calcule des statistiques. Avec Thibaut, on a choisi de travailler sur les <strong>arrêts de bus</strong> : lister tous les arrêts d'une ville et analyser leurs équipements (abri, banc, éclairage, accessibilité…).</p>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Apprentissages Critiques (AC) concernés</h4>
+      <div class="ac-grid">
+        <div class="ac-item"><div class="ac-code">AC13.01</div>Utiliser un système informatique et ses outils — j'ai utilisé Python, pip, la bibliothèque requests et l'API Overpass pour automatiser la récupération de données.</div>
+        <div class="ac-item"><div class="ac-code">AC13.02</div>Lire, exécuter et corriger un programme — j'ai écrit et débugué des scripts Python qui font des requêtes HTTP, manipulent du JSON et génèrent du Markdown/HTML.</div>
+        <div class="ac-item"><div class="ac-code">AC13.03</div>Traduire un algorithme dans un langage donné — j'ai traduit en Python la logique de requêtage Overpass QL et le calcul de statistiques sur les arrêts de bus.</div>
+        <div class="ac-item"><div class="ac-code">AC13.04</div>Connaître l'architecture d'un site Web — le projet génère des fichiers HTML à partir de Markdown, ce qui m'a fait comprendre la structure d'une page web et le rôle du balisage.</div>
+        <div class="ac-item"><div class="ac-code">AC13.05</div>Choisir les mécanismes de gestion de données — j'ai choisi d'utiliser des dictionnaires Python et du JSON pour stocker et manipuler les données OSM.</div>
+        <div class="ac-item"><div class="ac-code">AC13.06</div>S'intégrer dans un environnement de travail collaboratif — j'ai travaillé en binôme avec Thibaut, on s'est réparti les fonctions et on a partagé le code.</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Tâches réalisées (Contribution personnelle)</h4>
+      <ul>
+        <li>Écriture du module <code>md_to_html.py</code> : fonction de conversion Markdown → HTML avec la bibliothèque <code>markdown</code>.</li>
+        <li>Écriture de <code>fiche_osm.py</code> : requête sur l'API REST OpenStreetMap, récupération des données JSON d'un nœud, génération d'une fiche Markdown et HTML.</li>
+        <li>Écriture de <code>infos_locales.py</code> : requête Overpass QL pour récupérer tous les arrêts de bus d'une ville, calcul de statistiques (nombre et pourcentage d'arrêts avec abri, banc, poubelle, éclairage, accessibilité handicapé, dalles podotactiles, horaires affichés), et génération d'un rapport Markdown/HTML.</li>
+        <li>Le script est utilisable en ligne de commande : <code>python3 infos_locales.py Caen rapport</code>.</li>
+      </ul>
+      <div class="difficulties-block">
+        <h5>Difficultés rencontrées</h5>
+        <ul>
+          <li>Trouver un sujet pertinent et intéressant : on a hésité avant de se décider sur les arrêts de bus, qui avaient assez de données et de propriétés pour faire des stats.</li>
+          <li>Le projet était long : beaucoup de fonctions à implémenter et de documentation à lire (API OSM, Overpass QL, bibliothèque requests).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Résultats obtenus / Preuves et traces</h4>
+
+      <div class="trace-box">
+        <strong>Résultat HTML — Statistiques des arrêts de bus d'Ifs</strong> — 78 arrêts analysés : 44% avec abri, 38% avec banc, 26% avec poubelle, 14% accessibles en fauteuil roulant. Chaque arrêt est listé avec ses équipements.
+        <img src="../img/sae105-resultat-html.png" alt="Résultat HTML des statistiques arrêts de bus" style="width:100%; margin-top:.8rem; border-radius:6px; border:1px solid var(--border);">
+      </div>
+
+      <div class="trace-box">
+        <strong>Code source — infos_locales.py dans VS Code</strong> — Requête Overpass QL, fonctions documentées avec docstrings, calcul des statistiques.
+        <img src="../img/sae105-code-vscode.png" alt="Code Python dans VS Code" style="width:100%; margin-top:.8rem; border-radius:6px; border:1px solid var(--border);">
+      </div>
+
+      <div class="trace-box">
+        <strong>Architecture du code</strong> — 3 fichiers Python modulaires :
+        <pre style="margin-top:.8rem; padding:1rem; background:var(--bg); border:1px solid var(--border); border-radius:6px; font-size:.75rem; line-height:1.6; overflow-x:auto; color:var(--text-dim);">v8/
+├── md_to_html.py       # Conversion Markdown → HTML
+├── fiche_osm.py        # Fiche d'un point d'intérêt OSM
+└── infos_locales.py    # Stats sur les arrêts de bus d'une ville</pre>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-3">
+      <h4>Autoévaluation & Démarche réflexive</h4>
+      <div class="auto-eval-box">
+        <table class="reflexion-table">
+          <thead>
+            <tr>
+              <th>Difficulté rencontrée</th>
+              <th>Ce que je ferais si c'était à refaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Trouver un sujet pertinent avec assez de données et de propriétés pour faire des statistiques intéressantes.</td>
+              <td>Explorer la base OpenStreetMap plus tôt en début de projet pour repérer quels types d'objets ont des attributs exploitables, au lieu d'hésiter longtemps.</td>
+            </tr>
+            <tr>
+              <td>Projet long : beaucoup de documentation à lire (API OSM, Overpass QL, requests) et de fonctions à implémenter.</td>
+              <td>Découper le travail en étapes plus petites et se fixer des objectifs par séance pour avancer régulièrement.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="learnings-block">
+          <h5>Ce que j'ai appris & positionnement</h5>
+          <p>C'est la SAÉ que j'ai le plus appréciée. J'ai appris à interagir avec une API web en Python (requêtes HTTP, traitement JSON), à écrire un programme modulaire (3 fichiers qui s'importent entre eux) et à produire des résultats lisibles en Markdown et HTML. Le projet m'a aussi montré que la programmation, c'est pas juste écrire du code : c'est aussi lire de la documentation, faire des choix (quel sujet ? quelles stats ?) et structurer son travail en binôme. Je me positionne à un niveau <strong>satisfaisant</strong> : le projet fonctionne, le code est documenté et utilisable en ligne de commande.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><p>Portfolio BUT R&T · Aghiles ZIANE</p></footer>
+</body>
+</html>

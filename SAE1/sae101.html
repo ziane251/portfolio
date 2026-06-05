@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 1.01 — Hygiène Informatique</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .sae-header { padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+    .sae-badge { font-size: 1.8rem; font-weight: 800; width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--border); }
+    .sae-title { font-size: 1.4rem; font-weight: 800; }
+    .sae-desc { color: var(--text-dim); font-size: .85rem; margin-top: .3rem; }
+    .section-block { margin-bottom: 2rem; background: var(--card); border: 1px solid var(--border); padding: 1.6rem; border-radius: var(--radius); }
+    .section-block h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; color: var(--text); }
+    .section-block p, .section-block li { font-size: .86rem; color: var(--text-dim); line-height: 1.8; }
+    .ac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; margin-top: .8rem; }
+    .ac-item { padding: .8rem 1rem; font-size: .8rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); }
+    .ac-code { font-weight: 700; margin-bottom: .3rem; color: var(--text); }
+    .trace-box { border: 1px dashed var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: .7rem; font-size: .83rem; background: var(--bg); }
+    .auto-eval-box { background: var(--surface); padding: 1.2rem 1.4rem; border-radius: 8px; border: 1px solid var(--border); }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  
+<nav>
+  <a class="nav-logo" href="../index.html">Port<span>folio</span> R&T</a>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../presentation.html">Profil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn active">Mes Projets ▾</a>
+      <div class="dropdown-content">
+        <a href="sae101.html">Hygiène Informatique</a>
+        <a href="sae102.html">Réseaux Informatiques</a>
+        <a href="sae103.html">Dispositif de Transmission</a>
+        <a href="sae104.html">Site Personnel</a>
+        <a href="sae105.html">Traitement de Données</a>
+      </div>
+    </li>
+    <li><a href="../bilan.html">Bilans</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="section">
+    <div class="sae-header fade-up">
+      <div class="sae-badge">1.01</div>
+      <div>
+        <div class="sae-title">SAÉ 1.01 – Se sensibiliser à l'hygiène informatique</div>
+        <div class="sae-desc">BUT R&T · Semestre 1 · Groupe : Antonin, Felix, Thibaut, Aghiles</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Contexte & Objectifs</h4>
+      <p>L'objectif de cette SAÉ était de nous sensibiliser à la cybersécurité et aux bonnes pratiques informatiques. On avait deux choses à faire : suivre le MOOC de l'ANSSI (SecNumacadémie) en individuel, et réaliser un travail de groupe sur un thème lié à la sécurité. Notre groupe a travaillé sur le protocole SSH et les attaques par force brute. On devait produire un diaporama et le présenter à l'oral. On a aussi fait un TP où l'on a testé des attaques brute force sur des machines virtuelles.</p>
+    </div>
+
+    <div class="section-block fade-up delay-1">
+      <h4>Apprentissages Critiques (AC) concernés</h4>
+      <div class="ac-grid">
+        <div class="ac-item"><div class="ac-code">AC11.02</div>Comprendre l'architecture des systèmes numériques — j'ai appris le fonctionnement du protocole SSH : échange de clés, chiffrement symétrique et asymétrique.</div>
+        <div class="ac-item"><div class="ac-code">AC11.04</div>Maîtriser les principes des systèmes d'exploitation — j'ai modifié la configuration SSH sous Linux (<em>/etc/ssh/sshd_config</em>) et généré des clés Ed25519 sur des VM Debian.</div>
+        <div class="ac-item"><div class="ac-code">AC11.05</div>Identifier les dysfonctionnements réseau — le TP brute force m'a montré concrètement comment un accès mal sécurisé peut être exploité.</div>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Tâches réalisées (Contribution personnelle)</h4>
+      <ul>
+        <li>Suivi du MOOC de l'ANSSI (non terminé — voir difficultés ci-dessous).</li>
+        <li>Recherche sur le protocole SSH : chiffrement (AES-256, Curve25519, Ed25519), bonnes pratiques de sécurisation.</li>
+        <li>TP sur VM Debian : test d'attaques brute force avec Hydra et John the Ripper.</li>
+        <li>Réalisation d'un diaporama de 14 slides avec le groupe sur le SSH, et présentation orale devant la classe.</li>
+      </ul>
+      <div class="difficulties-block">
+        <h5>Difficultés rencontrées</h5>
+        <ul>
+          <li>Je n'ai pas terminé le MOOC. Il prenait beaucoup de temps et d'autres projets et contrôles arrivaient en parallèle. J'avais aussi du mal à tout retenir.</li>
+          <li>Au début du TP, je ne comprenais pas bien comment fonctionnait Hydra et la logique d'une attaque brute force.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-block fade-up delay-2">
+      <h4>Résultats obtenus / Preuves et traces</h4>
+
+      <div class="trace-box">
+        <strong>Diaporama SSH (14 slides)</strong> — Présentation de groupe couvrant le protocole SSH, le chiffrement, la sécurisation d'une connexion et les clés publique/privée. Retour du prof correct.
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:.6rem; margin-top:.8rem;">
+          <img src="../img/sae101-diapo-cover.jpg" alt="Slide de couverture - SSH" style="width:100%; border-radius:6px; border:1px solid var(--border);">
+          <img src="../img/sae101-diapo-sommaire.jpg" alt="Slide sommaire" style="width:100%; border-radius:6px; border:1px solid var(--border);">
+        </div>
+        <img src="../img/sae101-diapo-chiffrement.jpg" alt="Slide algorithmes de chiffrement" style="width:100%; margin-top:.6rem; border-radius:6px; border:1px solid var(--border);">
+        <p style="font-size:.75rem; color:var(--text-muted); margin-top:.4rem;">Slides 1, 2 et 7 du diaporama — couverture, sommaire et algorithmes de chiffrement recommandés.</p>
+      </div>
+
+      <div class="trace-box"><strong>Pas d'attestation MOOC</strong> — Je n'ai pas terminé le MOOC, donc pas de certificat. J'analyse ce point dans mon autoévaluation.</div>
+    </div>
+
+    <div class="section-block fade-up delay-3">
+      <h4>Autoévaluation & Démarche réflexive</h4>
+      <div class="auto-eval-box">
+        <table class="reflexion-table">
+          <thead>
+            <tr>
+              <th>Difficulté rencontrée</th>
+              <th>Ce que je ferais si c'était à refaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MOOC non terminé : trop de contenu, pas assez de temps, difficultés de compréhension.</td>
+              <td>Me fixer un planning avec quelques modules par semaine au lieu de tout faire d'un coup, et tenir des fiches résumées par thème.</td>
+            </tr>
+            <tr>
+              <td>Difficulté à comprendre Hydra et le fonctionnement d'une attaque brute force.</td>
+              <td>Lire la documentation de l'outil avant le TP pour arriver préparé, au lieu de tout découvrir pendant les manips.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="learnings-block">
+          <h5>Ce que j'ai appris & positionnement</h5>
+          <p>Cette SAÉ m'a fait prendre conscience des dangers liés aux réseaux et à Internet. Avant, je ne mesurais pas l'importance de sécuriser un accès SSH ou de bien gérer ses mots de passe. Le TP brute force m'a marqué : voir un mot de passe se faire craquer en quelques secondes rend les choses très concrètes. Même sans avoir terminé le MOOC, cette SAÉ a renforcé mon envie de m'orienter vers la cybersécurité. Je me positionne à un niveau <strong>en cours d'acquisition</strong> : les bases sont là, mais je dois encore approfondir les protocoles de chiffrement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><p>Portfolio BUT R&T · Aghiles ZIANE</p></footer>
+</body>
+</html>
